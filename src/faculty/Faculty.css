@@ -29,8 +29,9 @@ body.dark-mode {
 
 .faculty-content h2 {
     font-size: 2.5em;
-    color: var(--primary-color);
+    color: var(--text-color);
     position: relative;
+    left: 100px;
 }
 
 .faculty-content h2::before {
@@ -40,7 +41,7 @@ body.dark-mode {
     top: 0;
     bottom: 0;
     width: 5px;
-    background-color: var(--accent-color);
+    background-color: var(--danger-color);
 }
 
 .faculty-cards {
@@ -84,4 +85,5 @@ body.dark-mode {
     margin: 0;
     font-size: 1em;
     color: var(--primary-color);
+    font-weight: 700;
 }

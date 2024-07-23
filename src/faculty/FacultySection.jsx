@@ -18,8 +18,8 @@ const FacultySection = () => {
                         </div>
                     ))}
                 </div>
-                <hr />
             </div>
+            <hr />
         </section>
     );
 };
