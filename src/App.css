@@ -1,0 +1,23 @@
+.App {
+  background-color: #fefefe;
+  height: 100vh;
+  width: 100%;
+}
+
+:root {
+  --primary-color: #4A90E2;
+  --secondary-color: #FFFFFF;
+  --accent-color: #50E3C2;
+  --danger-color: #E94A4A;
+  --background-color: #F5F7FA;
+  --text-color: #333333;
+}
+
+body.dark-mode {
+  --primary-color: #0D47A1;
+  --secondary-color: #121212;
+  --accent-color: #00BFA5;
+  --danger-color: #FF5252;
+  --background-color: #1E1E1E;
+  --text-color: #E0E0E0;
+}

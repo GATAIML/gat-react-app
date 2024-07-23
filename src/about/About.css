@@ -1,0 +1,58 @@
+/* src/AboutSection.css */
+.about-section {
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+.about-content > div {
+    background: var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h2 {
+    margin-top: -1px;
+    font-size: 1.8rem;
+    /* margin: 0 0 10px 30px; Margin to the left to make space for the vertical line */
+    position: relative;
+    padding-left: 10px;
+}
+
+.about-content h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px; /* Thickness of the vertical line */
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--danger-color); 
+}
+
+.about-content p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+hr {
+    border-radius: 10px;
+    height: 4px;
+    margin: 40px 0;
+    background-color: var(--danger-color);
+}
