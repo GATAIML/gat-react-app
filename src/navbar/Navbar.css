@@ -37,6 +37,7 @@ body {
     z-index: 1000;
     box-sizing: border-box;
     transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: default;
 }
 
 .brand {
@@ -80,6 +81,7 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
+    cursor: default;
 }
 
 .navbar-item:hover {
@@ -141,24 +143,28 @@ body {
 }
 
 @media (max-width: 768px) {
-
     .hamburger {
         display: block;
+    }
+
+    .navbar {
+        overflow: hidden;
+        width: 100vw;
     }
 
     .navbar-menu {
         flex-direction: column;
         position: fixed;
-        top: 40px;
+        top: 50px; /* Adjusted to align below the navbar */
         left: 0;
-        width: 100%;
+        width: 100vw;
         background-color: var(--background-color);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         display: none;
         padding: 10px 0;
         box-sizing: border-box;
         max-height: calc(100vh - 60px);
-        overflow-y: auto;
+        overflow-y: auto; /* Enable vertical scrolling */
         z-index: 1000;
     }
 
@@ -197,7 +203,7 @@ body {
     }
 
     .theme-toggle {
-        padding-right: 50px;
         text-align: center;
+        margin-right: 50px;
     }
 }

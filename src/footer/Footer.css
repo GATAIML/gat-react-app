@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #FFFFFF;
+    --accent-color: #50E3C2;
+    --danger-color: #E94A4A;
+    --background-color: #F5F7FA;
+    --text-color: #333333;
+}
+
+body .dark-mode {
+    --primary-color: #0D47A1;
+    --secondary-color: #121212;
+    --accent-color: #00BFA5;
+    --danger-color: #FF5252;
+    --background-color: #1E1E1E;
+    --text-color: #E0E0E0;
+}
+
+/* Footer.css */
+.footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    /* padding: 1rem 0; */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-table {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.footer-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.footer-column {
+    vertical-align: top;
+    padding: 1rem;
+}
+
+.footer-nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav-links li {
+    margin: 0.5rem 0;
+}
+
+.footer-nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-nav-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.footer-social-icons a {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--danger-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: -5px;
+}
+
+.footer-social-icons i {
+    align-items: center;
+    justify-content: center;
+    margin-right: -5px;
+}
+
+.footer-social-icons a:hover {
+    background-color: var(--text-color);
+}
+
+.footer-map iframe {
+    border: 0;
+    width: 250px;
+    height: 250px;
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
+
+.footer-bottom a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .footer-table {
+        width: 100%;
+    }
+
+    .footer-column {
+        padding: 0.5rem;
+        display: block;
+        width: 100%;
+    }
+
+    .footer-nav-links li {
+        flex-direction: column;
+    }
+}
