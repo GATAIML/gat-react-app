@@ -20,11 +20,12 @@
 }
 
 .about-content h2 {
-    margin-top: -1px;
-    font-size: 1.8rem;
-    /* margin: 0 0 10px 30px; Margin to the left to make space for the vertical line */
+    font-size: 2.5em;
+    color: var(--text-color);
     position: relative;
-    padding-left: 10px;
+    padding-left: 20px; 
+    text-align: left;
+    margin-top: 0;
 }
 
 .about-content h2::before {
@@ -32,11 +33,9 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 4px; /* Thickness of the vertical line */
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--danger-color); 
+    bottom: 0;
+    width: 5px;
+    background-color: var(--danger-color);
 }
 
 .about-content p {
