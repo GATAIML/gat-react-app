@@ -4,11 +4,6 @@ import Logo from '../assets/Gat-Fav.png';
 
 const Footer = () => {
 
-    const handleNavigation = (page) => {
-        setActivePage(page);
-        setIsOpen(false);
-    };
-
     return (
         <footer className="footer">
             <div className="footer-content">
@@ -19,14 +14,6 @@ const Footer = () => {
                 <table>
                     <tbody>
                         <tr>
-                            {/* <td className="footer-column">
-                                <ul className="footer-nav-links">
-                                    <li><a href="#home">Home</a></li>
-                                    <li><a href="#recent-activities">Recent Activities</a></li>
-                                    <li><a href="#semester-01">Semester-01</a></li>
-                                    <li><a href="#semester-02">Semester-02</a></li>
-                                </ul>
-                            </td> */}
                             <td className="footer-column">
                                 <div className="footer-social-icons">
                                     <a href="#"><i className="bx bxl-facebook"></i> /GATAIML</a>
