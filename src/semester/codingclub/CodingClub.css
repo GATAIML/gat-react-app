@@ -1,0 +1,172 @@
+.coding-club {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.coding-club h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.coding-club p {
+    font-size: 16px;
+}
+
+.club-outcomes {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.club-outcomes h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.club-outcomes ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.club-outcomes li {
+    font-size: 16px;
+}
+
+.club-committee {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.club-committee h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.club-committee ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.club-committee li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.schedule {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.schedule h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.schedule ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.schedule li {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.schedule h2 {
+    color: var(--primary-color);
+}
+
+
+.club-members {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.club-members h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.club-members ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.club-members li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery-item {
+    width: calc(33.333% - 20px);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.gallery-item p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.certificates {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.certificates h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.certificates h2 {
+    color: var(--primary-color);
+}
+
+.certificates ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.certificates li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}

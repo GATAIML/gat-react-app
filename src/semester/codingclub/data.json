@@ -1,0 +1,101 @@
+{
+    "codingClub": {
+      "about": "Coding Club is specially designed for self-learning sessions and to bring out ideas for the problems. It also provides a unique platform for individuals from different perspectives, interests, and innovative minds to get together and discuss challenging problems in order to propose solutions to the impending practical problems. Coding Club also gives a place for the students to get certificates from the internet source to the ongoing courses in the sessions itself."
+    },
+    "clubOutcomes": [
+      "Members will gain a solid understanding of C programming fundamentals, including data types, loops, and functions.",
+      "Participants will delve into advanced topics such as pointers, data structures, and file handling, enhancing their proficiency in C programming.",
+      "By actively participating in club activities and projects, members will build a strong portfolio showcasing their C programming skills, which can be valuable for academic and professional endeavors."
+    ],
+    "clubCommittee": [
+      { "name": "Dr. N Rana Prathap Reddy", "position": "Principal" },
+      { "name": "Dr. Preethi Satish", "position": "Hod (AI&ML)" },
+      { "name": "Asst. Prof. C Christlin Shanuja", "position": "Faculty Co-ordinator (AI&ML)" },
+      { "name": "Bhuvan A R", "position": "Student Co-ordinator" },
+      { "name": "Sahana Y", "position": "Student Co-ordinator" },
+      { "name": "Chethan Ponnappa", "position": "Contributor" },
+      { "name": "Prajwal T Raj", "position": "Contributor" },
+      { "name": "Tharun Ramesh", "position": "Contributor" }
+    ],
+    "schedule": [
+      { "sessionCode": "CCS1", "date": "22 Nov 2023", "topics": ["C Preprocessor", "C Structure of a Program", "C Input and Output", "C Functions"] },
+      { "sessionCode": "CCS2", "date": "29 Nov 2023", "topics": ["C String Operations", "C Data Types", "C Expressions", "C Floating Point & Size of Operator"] },
+      { "sessionCode": "CCS3", "date": "06 Dec 2023", "topics": ["C Algorithms", "C Flow Chart", "C Code for Simple Program"] },
+      { "sessionCode": "CCS4", "date": "11 Dec 2023", "topics": ["C Control Statements", "C Loops", "C Variables"] },
+      { "sessionCode": "CCS5", "date": "23 Dec 2023", "topics": ["C Arrays", "C Pointers", "C Data Memory Allocation"] },
+      { "sessionCode": "CCS6", "date": "15 Jan 2024", "topics": ["C Certificate Class"] }
+    ],
+    "clubMembers": [
+      { "name": "Madhusudan", "department": "AI & ML" },
+      { "name": "Tharun Ramesh", "department": "AI & ML" },
+      { "name": "Sharan Basava", "department": "AI & ML" },
+      { "name": "Sahana Y", "department": "AI & ML" },
+      { "name": "Rashmitha S P", "department": "AI & ML" },
+      { "name": "Bhuvan A R", "department": "AI & ML" },
+      { "name": "Chethan Ponnappa A", "department": "AI & ML" },
+      { "name": "Prajwal T Raj", "department": "AI & ML" },
+      { "name": "Aditi S Yaranal", "department": "AI & ML" },
+      { "name": "Niyathi Nagesh", "department": "AI & ML" },
+      { "name": "Yashaswi P M", "department": "AI & ML" },
+      { "name": "Manishankar D Bhat", "department": "AI & ML" },
+      { "name": "Jhenkar C", "department": "AI & ML" },
+      { "name": "Yashavantha", "department": "AI & ML" },
+      { "name": "Aditiya", "department": "CSE" },
+      { "name": "Prafful", "department": "CSE" },
+      { "name": "Gururaj S N", "department": "CSE" },
+      { "name": "Kishore", "department": "CSE" },
+      { "name": "Vinutha S K", "department": "CV" },
+      { "name": "Vidyashree U C", "department": "CV" },
+      { "name": "Vidya S", "department": "CV" },
+      { "name": "Tarun M K", "department": "CV" },
+      { "name": "Siri P", "department": "ISE" },
+      { "name": "Deeptha", "department": "EEE" },
+      { "name": "Anjali", "department": "EEE" },
+      { "name": "Aditi Rajesh", "department": "EEE" }
+    ],
+    "gallery": [
+      { "title": "Coding Club Session - 1", "url": "https://example.com/coding-club-1.jpg" },
+      { "title": "Coding Club Session - 2", "url": "https://example.com/coding-club-2.jpg" },
+      { "title": "Coding Club Session - 3", "url": "https://example.com/coding-club-3.jpg" },
+      { "title": "Coding Club Session - 4", "url": "https://example.com/coding-club-4.jpg" },
+      { "title": "Coding Club Session - 5", "url": "https://example.com/coding-club-5.jpg" },
+      { "title": "Coding Club Session - 6", "url": "https://example.com/coding-club-6.jpg" }
+    ],
+    "certificates": {
+      "AI": [
+        { "id": "AI_12_TharunR", "name": "Tharun R" },
+        { "id": "AI_25_SahanaY", "name": "Sahana Y" },
+        { "id": "AI_27_RashmithaSP", "name": "Rashmitha S P" },
+        { "id": "AI_29_BhuvanAR", "name": "Bhuvan A R" },
+        { "id": "AI_31_ChethanPonnappaA", "name": "Chethan Ponnappa A" },
+        { "id": "AI_32_PrajwalTRaj", "name": "Prajwal T Raj" },
+        { "id": "AI_35_AditiSYaranal", "name": "Aditi S Yaranal" },
+        { "id": "AI_46_NiyathiNagesh", "name": "Niyathi Nagesh" },
+        { "id": "AI_48_YashaswiPM", "name": "Yashaswi P M" },
+        { "id": "AI_49_ManishankarDineshBhat", "name": "Manishankar Dinesh Bhat" },
+        { "id": "AI_50_JhenkarC", "name": "Jhenkar C" },
+        { "id": "AI_64_YashavanthMS", "name": "Yashavanth M S" }
+      ],
+      "CSE": [
+        { "id": "CS_158_AdityaLoddnor", "name": "Aditya Loddnor" },
+        { "id": "CS_160_PraffulJayaram", "name": "Prafful Jayaram" },
+        { "id": "CS_162_GururajSNHolla", "name": "Gururaj S N Holla" },
+        { "id": "CS_199_KishoreS", "name": "Kishore S" }
+      ],
+      "CV": [
+        { "id": "CV_28_VinuthaSK", "name": "Vinutha S K" },
+        { "id": "CV_29_VidyaShree", "name": "Vidya Shree" },
+        { "id": "CV_30_TaurnMK", "name": "Taurn M K" },
+        { "id": "CV_32_VidyaS", "name": "Vidya S" }
+      ],
+      "EEE": [
+        { "id": "EE_09_DeepthaNataraj", "name": "Deeptha Nataraj" },
+        { "id": "EE_53_AnjaliGudlanur", "name": "Anjali Gudlanur" },
+        { "id": "EE_99_AditiRajesh", "name": "Aditi Rajesh" }
+      ],
+      "ISE": [
+        { "id": "IS_80_SiriP", "name": "Siri P" }
+      ]
+    }
+  }
+  

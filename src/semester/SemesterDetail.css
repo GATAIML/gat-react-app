@@ -1,0 +1,13 @@
+/* SemesterDetail.css */
+.semester-detail {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.semester-detail h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}

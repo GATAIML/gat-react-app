@@ -22,3 +22,18 @@ body.dark-mode {
   --background-color: #1E1E1E;
   --text-color: #E0E0E0;
 }
+
+::-webkit-scrollbar {
+  background: transparent;
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background: var(--danger-color);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

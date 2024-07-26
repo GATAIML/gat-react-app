@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = ({ setActivePage }) => {
+const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
 
@@ -24,27 +25,22 @@ const Navbar = ({ setActivePage }) => {
         });
     };
 
-    const handleNavigation = (page) => {
-        setActivePage(page);
-        setIsOpen(false);
-    };
-
     return (
         <nav className="navbar">
             <div className="brand">GAT AIML.</div>
             <div className={`menu ${isOpen ? 'open' : ''}`}>
                 <ul className={`navbar-menu ${isOpen ? 'open' : ''}`}>
                     <li className="navbar-item">
-                        <a onClick={() => handleNavigation('home')}><i className="bx bx-home"></i>Home</a>
+                        <Link to="/" onClick={() => setIsOpen(false)}><i className="bx bx-home"></i>Home</Link>
                     </li>
                     <li className="navbar-item">
-                        <a onClick={() => handleNavigation('recent-activities')}><i className="bx bx-history"></i>Recent Activities</a>
+                        <Link to="/recent-activities" onClick={() => setIsOpen(false)}><i className="bx bx-history"></i>Recent Activities</Link>
                     </li>
                     <li className="navbar-item">
-                        <a onClick={() => handleNavigation('semester-01')}><i className="bx bx-book"></i>Semester-01</a>
+                        <Link to="/semester-01" onClick={() => setIsOpen(false)}><i className="bx bx-book"></i>Semester-01</Link>
                     </li>
                     <li className="navbar-item">
-                        <a onClick={() => handleNavigation('semester-02')}><i className="bx bx-book"></i>Semester-02</a>
+                        <Link to="/semester-02" onClick={() => setIsOpen(false)}><i className="bx bx-book"></i>Semester-02</Link>
                     </li>
                 </ul>
                 <div className="theme-toggle" onClick={toggleTheme}>

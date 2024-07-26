@@ -96,7 +96,7 @@ body {
     left: 0;
     border-radius: 20px;
     background-color: rgba(154, 154, 154, 0.8);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     color: var(--text-color);
     width: 150px;
@@ -155,7 +155,8 @@ body {
     .navbar-menu {
         flex-direction: column;
         position: fixed;
-        top: 50px; /* Adjusted to align below the navbar */
+        top: 50px;
+        /* Adjusted to align below the navbar */
         left: 0;
         width: 100vw;
         background-color: var(--background-color);
@@ -164,7 +165,8 @@ body {
         padding: 10px 0;
         box-sizing: border-box;
         max-height: calc(100vh - 60px);
-        overflow-y: auto; /* Enable vertical scrolling */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
         z-index: 1000;
     }
 
