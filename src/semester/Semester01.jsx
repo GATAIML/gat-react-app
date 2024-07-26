@@ -15,7 +15,7 @@ const Semester1 = () => {
             <h1>Semester 1 Topics</h1>
             <div className="card-container">
                 {semesterData.map((item) => (
-                    <Link key={item.id} to={`/semester1/${item.id}`} className="card">
+                    <Link key={item.id} to={`/semester01/${item.id}`} className="card">
                         <img src={item.photo} alt={item.title} className="card-photo" />
                         <div className="card-title">{item.title}</div>
                     </Link>

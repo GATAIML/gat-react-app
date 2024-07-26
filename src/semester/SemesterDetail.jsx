@@ -1,3 +1,4 @@
+// SemesterDetail.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import data from './codingclub/data.json'; // Adjust the path as needed
@@ -13,12 +14,10 @@ import './SemesterDetail.css';
 const SemesterDetail = () => {
     const { id } = useParams();
 
-    // Retrieve the data based on the ID
-    // For simplicity, assuming `id` is a category like 'codingClub', 'clubOutcomes', etc.
-    const category = id; // This should be adjusted based on your ID scheme
-    const dataCategory = data[category];
+    // Find the specific item in the data based on the id
+    const item = data.find(item => item.id === parseInt(id));
 
-    if (!dataCategory) {
+    if (!item) {
         return (
             <section className="semester-detail">
                 <h1>Data Not Found</h1>
@@ -27,15 +26,31 @@ const SemesterDetail = () => {
         );
     }
 
+    const renderComponent = () => {
+        switch (item.category) {
+            case 'codingClub':
+                return <CodingClubDetail club={item} />;
+            case 'clubOutcomes':
+                return <ClubOutcomes outcomes={item} />;
+            case 'clubCommittee':
+                return <ClubCommittee committee={item} />;
+            case 'schedule':
+                return <Schedule schedule={item} />;
+            case 'clubMembers':
+                return <ClubMembers members={item} />;
+            case 'gallery':
+                return <Gallery gallery={item} />;
+            case 'certificates':
+                return <Certificates certificates={item} />;
+            default:
+                return <p>Unknown category</p>;
+        }
+    };
+
     return (
         <section className="semester-detail">
-            {category === 'codingClub' && <CodingClubDetail club={data.codingClub} />}
-            {category === 'clubOutcomes' && <ClubOutcomes outcomes={data.clubOutcomes} />}
-            {category === 'clubCommittee' && <ClubCommittee committee={data.clubCommittee} />}
-            {category === 'schedule' && <Schedule schedule={data.schedule} />}
-            {category === 'clubMembers' && <ClubMembers members={data.clubMembers} />}
-            {category === 'gallery' && <Gallery gallery={data.gallery} />}
-            {category === 'certificates' && <Certificates certificates={data.certificates} />}
+            <h1>{item.title}</h1>
+            {renderComponent()}
         </section>
     );
 };

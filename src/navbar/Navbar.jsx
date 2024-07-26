@@ -34,14 +34,14 @@ const Navbar = () => {
                         <Link to="/" onClick={() => setIsOpen(false)}><i className="bx bx-home"></i>Home</Link>
                     </li>
                     <li className="navbar-item">
-                        <Link to="/recent-activities" onClick={() => setIsOpen(false)}><i className="bx bx-history"></i>Recent Activities</Link>
+                        <Link to="/recent-events" onClick={() => setIsOpen(false)}><i class='bx bx-calendar-event'></i>Recent Events</Link>
+                    </li>
+                    {/* <li className="navbar-item">
+                        <Link to="/semester01" onClick={() => setIsOpen(false)}><i className="bx bx-book"></i>Semester-01</Link>
                     </li>
                     <li className="navbar-item">
-                        <Link to="/semester-01" onClick={() => setIsOpen(false)}><i className="bx bx-book"></i>Semester-01</Link>
-                    </li>
-                    <li className="navbar-item">
-                        <Link to="/semester-02" onClick={() => setIsOpen(false)}><i className="bx bx-book"></i>Semester-02</Link>
-                    </li>
+                        <Link to="/semester02" onClick={() => setIsOpen(false)}><i className="bx bx-book"></i>Semester-02</Link>
+                    </li> */}
                 </ul>
                 <div className="theme-toggle" onClick={toggleTheme}>
                     <i className={`bx ${darkMode ? 'bx-sun' : 'bx-moon'}`}></i>

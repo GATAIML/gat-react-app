@@ -7,6 +7,7 @@ import RecentActivities from './recentactivites/RecentActivites';
 import Semester01 from './semester/Semester01';
 import SemesterDetail from './semester/SemesterDetail';
 import Semester02 from './semester/Semester02';
+import Registration from './form/Registration';
 import NotFound from './NotFound';
 import './App.css';
 
@@ -18,10 +19,11 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/recent-activities" element={<RecentActivities />} />
-            <Route path="/semester-01" element={<Semester01 />} />
-            <Route path="/semester1/:id" component={SemesterDetail} />
-            <Route path="/semester-02" element={<Semester02 />} />
+            <Route path="/recent-events" element={<RecentActivities />} />
+            <Route path="/semester01" element={<Semester01 />} />
+            <Route path="/semester01/:id" component={SemesterDetail} />
+            <Route path="/semester02" element={<Semester02 />} />
+            <Route path="/form/Registration" element={<Registration />} />
             <Route path="*" element={<NotFound />} /> {/* Route for 404 page */}
           </Routes>
         </div>
