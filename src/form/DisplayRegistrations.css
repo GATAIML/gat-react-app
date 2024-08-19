@@ -1,0 +1,60 @@
+/* DisplayRegistration.css */
+
+.display-section {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .display-container {
+    max-width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling for the container */
+    margin: 0 auto;
+    padding: 10px; /* Optional: add padding for better spacing */
+  }
+  
+  h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden; /* Ensure rounded corners on the table */
+    min-width: 600px; /* Optional: set a minimum width to force horizontal scroll if necessary */
+  }
+  
+  .data-table th, .data-table td {
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .data-table th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .data-table td {
+    color: var(--text-color);
+  }
+  
+  .data-table td a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  .data-table td a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .data-table {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,72 +1,126 @@
 import React, { useState } from 'react';
+import { db, storage, collection, addDoc, ref, uploadBytes, getDownloadURL } from '../firebase';
 import './Registration.css';
 
-const FormPage = () => {
+const RegistrationForm = () => {
     const [formData, setFormData] = useState({
-        name: '',
+        fullName: '',
         email: '',
-        phone: '',
-        semester: ''
+        phoneNumber: '',
+        sem: '',
+        file: null
     });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevData => ({
-            ...prevData,
-            [name]: value
-        }));
+    const [errors, setErrors] = useState({});
+    const [uploading, setUploading] = useState(false);
+
+    const validateForm = () => {
+        const newErrors = {};
+        if (!formData.fullName.trim()) newErrors.fullName = 'Name is required';
+        if (!formData.email.includes('@')) newErrors.email = 'Invalid email';
+        if (formData.phoneNumber.length < 10) newErrors.phoneNumber = 'Invalid phone number';
+        if (!formData.sem) newErrors.sem = 'Please select a semester';
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleChange = (e) => {
+        const { name, value, files } = e.target;
+        setFormData({
+            ...formData,
+            [name]: files ? files[0] : value
+        });
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Add your form submission logic here
+        if (!validateForm()) return;
+
+        setUploading(true);
+
+        try {
+            // Upload file to Firebase Storage
+            let fileUrl = '';
+            if (formData.file) {
+                const fileRef = ref(storage, `uploads/${Date.now()}_${formData.file.name}`);
+                const uploadResult = await uploadBytes(fileRef, formData.file);
+                fileUrl = await getDownloadURL(uploadResult.ref);
+            }
+
+            // Save form data and file URL to Firestore
+            await addDoc(collection(db, 'registrations'), {
+                fullName: formData.fullName,
+                email: formData.email,
+                phoneNumber: formData.phoneNumber,
+                sem: formData.sem,
+                fileUrl: fileUrl,
+                timestamp: new Date()
+            });
+
+            // Clear form after submission
+            setFormData({
+                fullName: '',
+                email: '',
+                phoneNumber: '',
+                sem: '',
+                file: null
+            });
+            setErrors({});
+            setUploading(false);
+            console.log('Form submitted successfully');
+        } catch (error) {
+            console.error('Failed to submit form:', error);
+            setUploading(false);
+        }
     };
 
     return (
-        <section>
+        <section className="form-section">
             <div className="form-container">
                 <h2>Student Information</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="name">Name:</label>
+                        <label htmlFor="fullName">Name:</label>
                         <input
+                            id="fullName"
                             type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
+                            name="fullName"
+                            value={formData.fullName}
                             onChange={handleChange}
                             required
                         />
+                        {errors.fullName && <div className="error-message">{errors.fullName}</div>}
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email:</label>
                         <input
-                            type="email"
                             id="email"
+                            type="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
                             required
                         />
+                        {errors.email && <div className="error-message">{errors.email}</div>}
                     </div>
                     <div className="form-group">
-                        <label htmlFor="phone">Phone Number:</label>
+                        <label htmlFor="phoneNumber">Phone Number:</label>
                         <input
+                            id="phoneNumber"
                             type="tel"
-                            id="phone"
-                            name="phone"
-                            value={formData.phone}
+                            name="phoneNumber"
+                            value={formData.phoneNumber}
                             onChange={handleChange}
                             required
                         />
+                        {errors.phoneNumber && <div className="error-message">{errors.phoneNumber}</div>}
                     </div>
                     <div className="form-group">
-                        <label htmlFor="semester">Semester:</label>
+                        <label htmlFor="sem">Semester:</label>
                         <select
-                            id="semester"
-                            name="semester"
-                            value={formData.semester}
+                            id="sem"
+                            name="sem"
+                            value={formData.sem}
                             onChange={handleChange}
                             required
                         >
@@ -76,13 +130,36 @@ const FormPage = () => {
                             <option value="6">6th Semester</option>
                             <option value="8">8th Semester</option>
                         </select>
+                        {errors.sem && <div className="error-message">{errors.sem}</div>}
                     </div>
-                    <button type="submit" className="submit-btn">Submit</button>
+                    <div className="form-group">
+                        <label htmlFor="file">Upload File:</label>
+                        <input
+                            id="file"
+                            type="file"
+                            name="file"
+                            onChange={handleChange}
+                        />
+                        {errors.file && <div className="error-message">{errors.file}</div>}
+                    </div>
+                    <button type="submit" className="submit-btn" disabled={uploading}>
+                        {uploading ? 'Uploading...' : 'Submit'}
+                    </button>
                 </form>
+                {Object.keys(errors).length > 0 && (
+                    <div className="error-dialog">
+                        Please correct the following errors:
+                        <ul>
+                            {Object.values(errors).map((error, index) => (
+                                <li key={index}>{error}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
                 <hr />
             </div>
         </section>
     );
 };
 
-export default FormPage;
+export default RegistrationForm;
