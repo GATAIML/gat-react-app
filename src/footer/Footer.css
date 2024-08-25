@@ -163,7 +163,7 @@ body.dark-mode {
     }
 
     .social-icons-container {
-        flex-direction: column; /* Stack icons vertically on small screens */
-        gap: 5px;
+        flex-direction: row; /* Display icons horizontally on small screens */
+        gap: 10px; /* Adjust gap as needed */
     }
 }
