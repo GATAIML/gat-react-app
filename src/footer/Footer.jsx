@@ -3,7 +3,6 @@ import './Footer.css';
 import Logo from '../assets/Gat-Fav.png';
 
 const Footer = () => {
-
     return (
         <footer className="footer">
             <div className="footer-content">
@@ -16,13 +15,25 @@ const Footer = () => {
                         <tr>
                             <td className="footer-column">
                                 <div className="footer-social-icons">
-                                    <a href="www.google.com"><i className="bx bxl-facebook"></i> /GATAIML</a>
-                                    <a href="www.google.com"><i className="bx bxl-twitter"></i> /GATAIML</a>
-                                    <a href="www.google.com"><i className="bx bxl-instagram"></i> /GATAIML</a>
-                                    <a href="www.google.com"><i className="bx bxl-linkedin"></i> /GATAIML</a>
+                                    <h2>Follow us on</h2>
+                                    <div className="social-icons-container">
+                                        <a href="https://www.facebook.com/YourPage" className="social-icon facebook" target="_blank" rel="noopener noreferrer">
+                                            <i className="bx bxl-facebook"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/YourProfile" className="social-icon instagram" target="_blank" rel="noopener noreferrer">
+                                            <i className="bx bxl-instagram"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/company/YourCompany" className="social-icon linkedin" target="_blank" rel="noopener noreferrer">
+                                            <i className="bx bxl-linkedin"></i>
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/YourChannel" className="social-icon youtube" target="_blank" rel="noopener noreferrer">
+                                            <i className="bx bxl-youtube"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </td>
                             <td className="footer-column">
+                                <h2>Address</h2>
                                 <address>
                                     Rajarajeshwarinagar,(off Mysore Road), Ideal Homes Township, Bangalore, Karnataka, India-560098
                                 </address>
@@ -41,11 +52,11 @@ const Footer = () => {
                 </table>
             </div>
             <div className="footer-bottom">
-                <p>©GAT AIML 2024, Copyrights Reserved
-                    <br></br>
-                    <br></br>
-                    <a href="#terms">Terms</a> |
-                    <a href="#privacy">Privacy Policy</a></p>
+                <p>©GAT - AIML - 2024, Copyrights Reserved
+                    <br />
+                    <a href="#terms">Terms</a> | 
+                    <a href="#privacy"> Privacy Policy</a>
+                </p>
             </div>
         </footer>
     );

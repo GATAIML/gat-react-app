@@ -33,13 +33,13 @@ const Navbar = () => {
                     <li className="navbar-item">
                         <Link to="/" onClick={() => setIsOpen(false)}><i className="bx bx-home"></i>Home</Link>
                     </li>
-                    <li className="navbar-item">
+                    {/* <li className="navbar-item">
                         <Link to="/recent-events" onClick={() => setIsOpen(false)}><i class='bx bx-calendar-event'></i>Recent Events</Link>
+                    </li> */}
+                    <li className="navbar-item">
+                        <Link to="/batch-2023" onClick={() => setIsOpen(false)}><i className="bx bx-book"></i>Batch - 2023</Link>
                     </li>
                     {/* <li className="navbar-item">
-                        <Link to="/semester01" onClick={() => setIsOpen(false)}><i className="bx bx-book"></i>Semester-01</Link>
-                    </li>
-                    <li className="navbar-item">
                         <Link to="/semester02" onClick={() => setIsOpen(false)}><i className="bx bx-book"></i>Semester-02</Link>
                     </li> */}
                 </ul>

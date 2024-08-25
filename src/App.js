@@ -1,16 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
+// Main Nav & Footer
 import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
+// Other Pages
 import Home from './home/Home';
 import RecentActivities from './recentactivites/RecentActivites';
-import Semester01 from './semester/Semester01';
-import SemesterDetail from './semester/SemesterDetail';
-import Semester02 from './semester/Semester02';
+// Batch Wise Section
+import Batch2023 from './batch-2023/Batch-2023';
+// Events August 2024
+import WhitePaperArticulation from './batch-2023/august24/White-Paper-Articulation';
+import InductionProgram from './batch-2023/august24/Induction-Program';
+//Form
 import Registration from './form/Registration';
 import DisplayRegistrations from './form/DisplayRegistration';
+// Not found
 import NotFound from './NotFound';
-import './App.css';
 
 const App = () => {
   return (
@@ -21,9 +27,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/recent-events" element={<RecentActivities />} />
-            <Route path="/semester01" element={<Semester01 />} />
-            <Route path="/semester01/:id" component={SemesterDetail} />
-            <Route path="/semester02" element={<Semester02 />} />
+            <Route path="/batch-2023" element={<Batch2023 />} />
+            <Route path="/batch-2023/white-paper-articulation" element={<WhitePaperArticulation />} />
+            <Route path="/batch-2023/induction-program" element={<InductionProgram />} />
             <Route path="/form/Registration" element={<Registration />} />
             <Route path="/form/DisplayRegistration" element={<DisplayRegistrations />} />
             <Route path="*" element={<NotFound />} /> {/* Route for 404 page */}

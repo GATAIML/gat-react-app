@@ -7,7 +7,7 @@
     --text-color: #333333;
 }
 
-body .dark-mode {
+body.dark-mode {
     --primary-color: #0D47A1;
     --secondary-color: #121212;
     --accent-color: #00BFA5;
@@ -16,25 +16,25 @@ body .dark-mode {
     --text-color: #E0E0E0;
 }
 
-/* Footer.css */
+/* Footer styles */
 .footer {
     background-color: var(--background-color);
     color: var(--text-color);
-    /* padding: 1rem 0; */
     text-align: center;
+    padding: 1rem 0;
 }
 
 .footer-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin-bottom: 1rem;
 }
 
 .footer-logo {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-text {
@@ -57,54 +57,58 @@ body .dark-mode {
     padding: 1rem;
 }
 
-.footer-nav-links {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-nav-links li {
-    margin: 0.5rem 0;
-}
-
-.footer-nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.footer-nav-links a:hover {
-    text-decoration: underline;
-}
-
 .footer-social-icons {
+    margin-top: 10px;
+}
+
+.footer-social-icons h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.social-icons-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    font-size: 1rem;
-}
-
-.footer-social-icons a {
-    color: var(--secondary-color);
     font-size: 1.5rem;
     text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--danger-color);
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin-top: -5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.footer-social-icons i {
-    align-items: center;
-    justify-content: center;
-    margin-right: -5px;
+.social-icon.facebook {
+    color: #1877F2; /* Facebook blue */
 }
 
-.footer-social-icons a:hover {
+.social-icon.instagram {
+    background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    color: #FFFFFF;
+    border: none;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(135deg, #DD2A7B, #F58529, #515BD4, #8134AF);
+}
+
+.social-icon.linkedin {
+    color: #0077B5; /* LinkedIn blue */
+}
+
+.social-icon.youtube {
+    color: #FF0000; /* YouTube red */
+}
+
+.social-icon:hover {
     background-color: var(--text-color);
+    color: var(--background-color);
 }
 
 .footer-map iframe {
@@ -118,6 +122,10 @@ body .dark-mode {
     font-size: 0.875rem;
 }
 
+.footer-bottom p {
+    margin: 0;
+}
+
 .footer-bottom a {
     color: var(--text-color);
     text-decoration: none;
@@ -127,7 +135,7 @@ body .dark-mode {
     text-decoration: underline;
 }
 
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .footer-table {
         width: 100%;
@@ -139,7 +147,23 @@ body .dark-mode {
         width: 100%;
     }
 
-    .footer-nav-links li {
+    .social-icons-container {
+        gap: 10px; /* Adjust gap for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+
+    .social-icons-container {
+        flex-direction: column; /* Stack icons vertically on small screens */
+        gap: 5px;
     }
 }
